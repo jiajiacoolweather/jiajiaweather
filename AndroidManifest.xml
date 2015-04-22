@@ -29,6 +29,10 @@
             android:name="com.jiajia.cooleather.app.activity.WeatherActivity"
             android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen" >
         </activity>
+
+        <service android:name="com.jiajia.cooleather.app.service.AutoUpdateService" >
+        </service>
+        <receiver android:name="com.jiajia.cooleather.app.receiver.AutoUpdateReceiver"></receiver>
     </application>
 
 </manifest>

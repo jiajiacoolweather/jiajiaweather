@@ -1,6 +1,7 @@
 package com.jiajia.cooleather.app.activity;
 
 import com.jiajia.cooleather.app.R;
+import com.jiajia.cooleather.app.service.AutoUpdateService;
 import com.jiajia.cooleather.app.util.HttpCallbackListener;
 import com.jiajia.cooleather.app.util.HttpUtil;
 import com.jiajia.cooleather.app.util.Utility;
@@ -161,6 +162,9 @@ public class WeatherActivity extends Activity implements OnClickListener {
 		currentDateText.setText(presf.getString("current_date", ""));
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);
+		
+		Intent intent = new Intent(this, AutoUpdateService.class);
+		startService(intent);
 	}
 
 	@Override
